@@ -1,0 +1,61 @@
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+%step-title {
+    display: block;
+    width: 250px;
+    color: #FFF;
+    font-family: "Montserrat-700";
+    font-size: 24px;
+    position: absolute;
+}
+
+%step-text {
+    display: block;
+    width: 250px;
+    color: #E3E3E3;
+    font-family: "Roboto-300";
+    font-size: 14px;
+    position: absolute;
+}
+
+%person-name {
+    color: #444;
+    text-align: center;
+    font-family: "Montserrat-700";
+    font-size: 14px;
+}
+
+%person-about {
+    color: #666;
+    text-align: center;
+    font-family: "Roboto-300";
+    font-size: 14px;
+}
+
+%idea-title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Montserrat-700";
+    font-size: 22px;
+    text-decoration: none;
+    position: absolute;
+}
+
+%buttons {
+    border-radius: 40px;
+    background: #FF4E50;
+    color: #FFF;
+    border: none;
+    font-family: "Montserrat-700";
+    font-size: 14px;
+}
+
+%icons {
+    @include sizes(32px, 32px);
+    border-radius: 65px;
+    outline: 4px solid white;
+    background-repeat: no-repeat;
+}

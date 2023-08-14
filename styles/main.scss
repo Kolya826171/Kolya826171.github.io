@@ -1,0 +1,1353 @@
+@import 'base/reset';
+@import 'fonts/fonts';
+@import 'base/mixins';
+
+.header {
+    @include sizes(1440px, 700px);
+    background-image: url(images/header.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    &-box {
+        @include sizes(470px, 252px);
+        position: relative;
+        top: 198px;
+        left: 485px;
+
+        &__title {
+            color: #FFF;
+            text-align: center;
+            font-family: "Montserrat-700";
+            font-size: 52px;
+            line-height: 63px;
+        }
+
+        &__text {
+            color: #FFF;
+            text-align: center;
+            font-family: "Roboto-300";
+            font-size: 24px;
+            margin-top: 28px;
+        }
+
+        &__btn {
+            @include sizes(225px, 40px);
+            @extend %buttons;
+            text-align: center;
+            margin-top: 34px;
+            margin-left: 123px;
+        }
+    }
+}
+
+.logo-register {
+    width: 1000px;
+    display: flex;
+    position: relative;
+    top: 50px;
+    left: 248px;
+}
+
+.logo__link {
+    color: #FFF;
+    font-family: "Montserrat-700";
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.register {
+    margin-left: -15px;
+    margin-top: -9px;
+
+    &__log {
+        @include sizes(73px, 36px);
+        border-radius: 40px;
+        color: white;
+        border: none;
+        background: transparent;
+        font-family: "Montserrat-400";
+        font-size: 14px;
+    }
+
+    &__sign {
+        @include sizes(90px, 36px);
+        border-radius: 40px;
+        border: 2px solid #FFF;
+        color: white;
+        background: transparent;
+        font-family: "Montserrat-400";
+        font-size: 14px;
+    }
+}
+
+.section1 {
+    @include sizes(940px, 467px);
+    margin-top: 91px;
+    margin-left: 250px;
+
+    &__title {
+        color: #444;
+        text-align: center;
+        font-family: "Montserrat-700";
+        font-size: 26px;
+    }
+}
+
+.step {
+    @include sizes(940px, 400px);
+    margin-top: 38px;
+    display: flex;
+    justify-content: space-between;
+
+    &__1 {
+        @include sizes(300px, 400px);
+        background-image: url(images/Step1.png);
+        background-repeat: no-repeat;
+        background-size: 209%;
+        background-position: 50% -7px;
+
+
+        &__btn {
+            @include sizes(70px, 20px);
+            @extend %buttons;
+            font-family: "Montserrat-400";
+            font-size: 10px;
+            letter-spacing: 2px;
+            line-height: 12px;
+            margin-bottom: 159px;
+            margin-left: 25px;
+            position: absolute;
+        }
+
+        &__title {
+            @extend %step-title;
+            margin-bottom: 88px;
+            
+        }
+
+        &__text {
+            @extend %step-text;
+            margin-bottom: 20px;
+            
+        }
+    }
+
+    &__2 {
+        @include sizes(300px, 400px);
+        border-radius: 4px;
+        background-image: url(images/Step2.png);
+        background-repeat: no-repeat;
+        background-size: 214%;
+        background-position: 50% -13px;
+
+        &__btn {
+            @include sizes(70px, 20px);
+            @extend %buttons;
+            font-family: "Montserrat-400";
+            font-size: 10px;
+            letter-spacing: 2px;
+            line-height: 12px;
+            margin-bottom: 128px;
+            margin-left: 25px;
+            position: absolute;
+        }
+
+        &__title {
+            @extend %step-title;
+            margin-bottom: 80px;
+        }
+
+        &__text {
+            @extend %step-text;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__3 {
+        @include sizes(300px, 400px);
+        background-image: url(images/Step3.png);
+        background-repeat: no-repeat;
+        background-size: 203%;
+        background-position: 50% 0px;
+
+        &__btn {
+            @include sizes(70px, 20px);
+            @extend %buttons;
+            font-family: "Montserrat-400";
+            font-size: 10px;
+            letter-spacing: 2px;
+            line-height: 12px;
+            margin-bottom: 158px;
+            margin-left: 25px;
+            position: absolute;
+        }
+
+        &__title {
+            @extend %step-title;
+            margin-bottom: 88px;
+        }
+
+        &__text {
+            @extend %step-text;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__mask {
+        @include sizes(100%, 100%);
+        border-radius: 4px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+        position: relative;
+    }
+}
+
+.section2 {
+    @include sizes(941px, 367px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 91px;
+    margin-left: 251px;
+
+    &__title {
+        color: #444;
+        text-align: center;
+        font-family: "Montserrat-700";
+        font-size: 26px;
+    }
+
+    &__btn {
+        @include sizes(180px, 40px);
+        @extend %buttons;
+        padding-top: 3px;
+        padding-left: 8px;
+    }
+}
+
+.person {
+    @include sizes(941px, 261px);
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+
+    &__1 {
+        @include sizes(221px, 225px);
+
+        &__img {
+            @include sizes(120px, 120px);
+            border-radius: 65px;
+            background-image: url(images/person1.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__ico {
+            @extend %icons;
+            background-color: #FF4E50;
+            background-image: url(images/music.svg);
+            background-size: 55% 55%;
+            background-position: 6px 9px;
+        }
+
+        &__name {
+            @extend %person-name;
+            margin-top: 22px;
+            margin-left: -3px;
+        }
+
+        &__about {
+            @extend %person-about;
+            margin-top: 22px;
+            margin-left: -2px;
+        }
+    }
+
+    &__2 {
+        @include sizes(221px, 225px);
+
+        &__img {
+            @include sizes(120px, 120px);
+            border-radius: 65px;
+            background-image: url(images/person2.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__ico {
+            @extend %icons;
+            background-color: #19D4CA;
+            background-image: url(images/brush.svg);
+            background-size: 50% 50%;
+            background-position: 8px 7px;
+        }
+
+        &__name {
+            @extend %person-name;
+            margin-top: 22px;
+            margin-left: -3px;
+        }
+
+        &__about {
+            @extend %person-about;
+            margin-top: 22px;
+            margin-left: -2px;
+        }
+    }
+
+    &__3 {
+        @include sizes(221px, 225px);
+
+        &__img {
+            @include sizes(120px, 120px);
+            border-radius: 65px;
+            background-image: url(images/person3.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__ico {
+            @extend %icons;
+            background-color: #FFA710;
+            background-image: url(images/camera.svg);
+            background-size: 50% 50%;
+            background-position: 7px 7px;
+        }
+
+        &__name {
+            @extend %person-name;
+            margin-top: 22px;
+            margin-left: -3px;
+        }
+
+        &__about {
+            display: block;
+            width: 221px;
+            @extend %person-about;
+            margin-top: 27px;
+            margin-left: 7px;
+        }
+    }
+
+    &__4 {
+        @include sizes(221px, 225px);
+
+        &__img {
+            @include sizes(120px, 120px);
+            border-radius: 65px;
+            background-image: url(images/person4.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__ico {
+            @extend %icons;
+            background-color: #667DF3;
+            background-image: url(images/airplane.svg);
+            background-size: 60% 60%;
+            background-position: 7px 7px;
+        }
+
+        &__name {
+            @extend %person-name;
+            margin-top: 22px;
+            margin-left: -3px;
+        }
+
+        &__about {
+            display: block;
+            width: 200px;
+            @extend %person-about;
+            margin-top: 27px;
+            margin-left: -2px;
+        }
+    }
+}
+
+.section3 {
+    @include sizes(940px, 1031px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 89px;
+    margin-left: 250px;
+
+    &__title {
+        color: #444;
+        text-align: center;
+        font-family: "Montserrat-700";
+        font-size: 26px;
+    }
+}
+
+.idea {
+    @include sizes(940px, 970px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: end;
+    margin-top: 37px;
+
+
+    &__1 {
+        @include sizes(300px, 310px);
+        background-image: url(images/Sport.png);
+        background-repeat: no-repeat;
+        background-size: 178%;
+        background-position: 41% -3px;
+        border-radius: 4px;
+
+        &__title {
+            @extend %idea-title;
+        }
+    }
+
+    &__2 {
+        @include sizes(300px, 310px);
+        background-image: url(images/Health.png);
+        background-repeat: no-repeat;
+        background-size: 126%;
+        background-position: 102% -11px;
+        border-radius: 4px;
+
+        &__title {
+           @extend %idea-title;
+        }
+    }
+
+    &__3 {
+        @include sizes(300px, 310px);
+        background-image: url(images/Extreme.png);
+        background-repeat: no-repeat;
+        background-size: 189%;
+        background-position: 95% -5px;
+        border-radius: 4px;
+
+        &__title {
+            @extend %idea-title;
+            display: block;
+            width: 187px;
+            line-height: 27px;
+        }
+    }
+
+    &__4 {
+        @include sizes(300px, 310px);
+        background-image: url(images/Games.png);
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: 34% -13px;
+        border-radius: 4px;
+        margin-top: 20px;
+
+        &__title {
+            @extend %idea-title;
+        }
+    }
+
+    &__5 {
+        @include sizes(620px, 310px);
+        background-image: url(images/Culture.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 41% -39px;
+        border-radius: 4px;
+        margin-top: 20px;
+
+        &__title {
+            @extend %idea-title;
+        }
+    }
+
+    &__6 {
+        @include sizes(620px, 310px);
+        background-image: url(images/Relaxation.png);
+        background-repeat: no-repeat;
+        background-size: 102%;
+        background-position: 49% -57px;
+        border-radius: 4px;
+        margin-top: 20px;
+
+        &__title {
+            @extend %idea-title;
+        }
+    }
+
+    &__7 {
+        @include sizes(300px, 310px);
+        background-image: url(images/Trevelling.png);
+        background-repeat: no-repeat;
+        background-size: 121%;
+        background-position: 51% -8px;
+        border-radius: 4px;
+        margin-top: 20px;
+
+        &__title {
+            @extend %idea-title;
+        }
+    }
+
+}
+
+.mask {
+    @include sizes(100%, 100%);
+    opacity: 0.2;
+    border-radius: 4px;
+    background: #000;
+}
+
+.section4 {
+    @include sizes(482px, 262px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 93px;
+    margin-left: 478px;
+
+    &__title {
+        color: #444;
+        text-align: center;
+        font-family: "Montserrat-700";
+        font-size: 26px;
+    }
+
+    &__text {
+        color: #666;
+        text-align: center;
+        font-family: "Roboto-300";
+        font-size: 18px;
+        line-height: 14px;
+        margin-top: 57px;
+        margin-left: 2px;
+    }
+}
+
+.search-form {
+    @include sizes(482px, 40px);
+    margin-top: 26px;
+
+    &__input {
+        @include sizes(299px, 40px);
+        border-radius: 3px;
+        border: 1px solid #D4D4D4;
+        background: #FFF;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07);
+        padding-left: 14px;
+
+        &::placeholder {
+            color: #999;
+            font-family: "Roboto-300";
+            font-size: 14px;
+        }
+    }
+
+    &__btn {
+        @include sizes(172px, 40px);
+        @extend %buttons;
+        margin-left: 7px;
+        margin-top: -2px;
+        padding-top: 4px;
+        padding-left: 9px;
+    }
+}
+
+.footer {
+    @include sizes(1440px, 224px);
+    border-top: 2px solid #FF4E50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-box {
+        @include sizes(1000px, 186px);
+        margin-left: 21px;
+        margin-top: 42px;
+    }
+}
+
+.logo-box {
+    &__link {
+        color: #FF4E50;
+        font-family: "Montserrat-400";
+        text-decoration: none;
+        font-size: 16px;
+    }
+}
+
+.menu {
+    margin-top: 2px;
+    margin-left: -9px;
+
+    &__title {
+        color: #444;
+        font-family: "Montserrat-700";
+        font-size: 14px;
+    }
+
+    ul {
+        margin-top: 11px;
+    }
+
+    &__link {
+        color: #999;
+        font-family: "Roboto-300";
+        font-size: 14px;
+        line-height: 26px;
+        text-decoration: none;
+    }
+}
+
+.partners__title {
+    color: #444;
+    font-family: "Montserrat-700";
+    font-size: 14px;
+    margin-top: 2px;
+    margin-left: -11px;
+}
+
+.designer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: -22px;
+
+    &__text {
+        color: #CCC;
+        font-family: "Montserrat-700";
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    &__link {
+        @include sizes(110px, 24px);
+        margin-top: 8px;
+        margin-right: 4px;
+
+    }
+}
+
+@media screen and (max-width:1455px) {
+
+    .header {
+        @include sizes(768px, 700px);
+        background-size: cover;
+        background-position-x: 50%;
+
+        &-box {
+            top: 197px;
+            left: 150px;
+
+            &__text {
+                margin-top: 27px;
+                margin-left: -3px;
+            }
+
+            &__btn {
+                padding-top: 3px;
+            }
+        }
+    }
+
+    .logo-register {
+        width: 670px;
+        top: 48px;
+        left: 48px;
+    }
+
+    .register {
+        margin-left: 0px;
+    }
+
+    .section1 {
+        @include sizes(748px, 462px);
+        margin-top: 97px;
+        margin-left: 11px;
+
+        &__title {
+            font-size: 22px;
+        }
+    }
+
+    .step {
+        @include sizes(748px, 400px);
+        margin-top: 37px;
+        margin-left: -1px;
+
+        &__1 {
+            @include sizes(236px, 400px);
+            background-size: 265%;
+            background-position: 42% -9px;
+
+
+            &__btn {
+                margin-bottom: 174px;
+                margin-left: 20px;
+            }
+
+            &__title {
+                width: 196px;
+                line-height: 14px;
+                margin-bottom: 102px;
+
+            }
+
+            &__text {
+                width: 196px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__2 {
+            @include sizes(236px, 400px);
+            background-size: 270%;
+            background-position: 42% -13px;
+
+
+            &__btn {
+                margin-bottom: 125px;
+                margin-left: 20px;
+            }
+
+            &__title {
+                width: 196px;
+                line-height: 14px;
+                margin-bottom: 81px;
+
+            }
+
+            &__text {
+                width: 196px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__3 {
+            @include sizes(236px, 400px);
+            background-size: 260%;
+            background-position: 42% -5px;
+
+
+            &__btn {
+                margin-bottom: 174px;
+                margin-left: 20px;
+            }
+
+            &__title {
+                width: 196px;
+                line-height: 14px;
+                margin-bottom: 102px;
+
+            }
+
+            &__text {
+                width: 196px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .section2 {
+        @include sizes(492px, 606px);
+        margin-top: 94px;
+        margin-left: 138px;
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__btn {
+            padding-left: 11px;
+            margin-top: 40px
+        }
+    }
+
+    .person {
+        @include sizes(492px, 464px);
+        margin-top: 37px;
+        flex-wrap: wrap;
+
+        &__1 {
+            @include sizes(236px, 205px);
+            order: 1;
+
+            &__name {
+                margin-top: 20px;
+                margin-left: 0px;
+            }
+
+            &__about {
+                margin-top: 23px;
+                margin-left: 0px;
+            }
+        }
+
+        &__2 {
+            @include sizes(236px, 205px);
+            order: 3;
+            margin-top: 28px;
+
+            &__img {
+                @include sizes(122px, 122px);
+            }
+
+            &__name {
+                margin-left: 0px;
+            }
+
+            &__about {
+                margin-left: 0px;
+            }
+        }
+
+        &__3 {
+            @include sizes(236px, 231px);
+            order: 2;
+
+            &__img {
+                @include sizes(122px, 119px);
+            }
+
+            &__name {
+                margin-top: 21px;
+                margin-left: -1px;
+            }
+
+            &__about {
+                width: 236px;
+                margin-top: 28px;
+                margin-left: -1px;
+            }
+        }
+
+        &__4 {
+            @include sizes(236px, 225px);
+            order: 4;
+            margin-top: 28px;
+
+            &__img {
+                @include sizes(120px, 120px);
+            }
+
+            &__name {
+                margin-top: 20px;
+                margin-left: 0px;
+            }
+
+            &__about {
+                width: 236px;
+                margin-top: 23px;
+                margin-left: -0px;
+            }
+        }
+    }
+
+    .section3 {
+        @include sizes(748px, 1032px);
+        margin-top: 94px;
+        margin-left: 10px;
+
+        &__title {
+            font-size: 22px;
+        }
+    }
+
+    .idea {
+        @include sizes(748px, 970px);
+
+        &__1 {
+            @include sizes(236px, 310px);
+            background-size: 226%;
+            background-position: 46% -4px;
+
+            &__title {
+                display: block;
+                width: 206px;
+                margin-top: -28px;
+                line-height: 27px;
+            }
+        }
+
+        &__2 {
+            @include sizes(236px, 310px);
+            background-size: 163%;
+            background-position: 83% -16px;
+
+            &__title {
+                display: block;
+                width: 206px;
+                line-height: 27px;
+            }
+        }
+
+        &__3 {
+            @include sizes(236px, 310px);
+            background-size: 242%;
+            background-position: 82% -6px;
+
+            &__title {
+                width: 206px;
+            }
+        }
+
+        &__4 {
+            @include sizes(236px, 310px);
+            background-size: 255%;
+            background-position: 36% -14px;
+        }
+
+        &__5 {
+            @include sizes(492px, 310px);
+            background-size: 126%;
+            background-position: 55% -39px;
+        }
+
+        &__6 {
+            @include sizes(492px, 310px);
+            background-size: 129%;
+            background-position: 5% -57px;
+        }
+
+        &__7 {
+            @include sizes(236px, 310px);
+            background-size: 154%;
+            background-position: 10% -8px;
+        }
+
+    }
+
+    .section4 {
+        @include sizes(482px, 256px);
+        margin-top: 94px;
+        margin-left: 143px;
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__text {
+            margin-top: 55px;
+            margin-left: 2px;
+        }
+    }
+
+    .footer {
+        @include sizes(768px, 224px);
+
+        &-box {
+            @include sizes(740px, 186px);
+            margin-left: 15px;
+        }
+    }
+
+    .menu {
+        margin-top: 1px;
+        margin-left: 41px;
+
+        ul {
+            margin-top: 13px;
+        }
+    }
+
+    .partners__title {
+        margin-top: 1px;
+        margin-left: -15px;
+    }
+
+    .designer {
+        margin-left: 58px;
+    }
+}
+
+@media screen and (max-width:783px) {
+    .header {
+        @include sizes(320px, 540px);
+        background-image: url(images/header2.png);
+        background-size: 100% 100%;
+        background-position: 0 0;
+        display: flex;
+        flex-direction: column;
+
+        &-box {
+            @include sizes(280px, 183px);
+            top: 46px;
+            left: 19px;
+
+            &__title {
+                font-size: 30px;
+                line-height: 37px;
+            }
+
+            &__text {
+                display: block;
+                width: 280px;
+                font-size: 18px;
+                line-height: 24.5px;
+                margin-top: 7px;
+                margin-left: 0px;
+            }
+
+            &__btn {
+                @include sizes(280px, 40px);
+                margin-top: 13px;
+                margin-left: 2px;
+            }
+        }
+    }
+
+    .logo-register {
+        @include sizes(154px, 157px);
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        top: 29px;
+        left: 85px;
+    }
+
+    .logo {
+        margin-bottom: 11px;
+    }
+
+    .register {
+        width: 200px;
+        margin-left: -15px;
+    }
+
+    .section1 {
+        @include sizes(300px, 782px);
+        margin-top: 36px;
+        margin-left: 10px;
+
+        &__title {
+            font-size: 22px;
+        }
+    }
+
+    .step {
+        @include sizes(300px, 740px);
+        margin-top: 18px;
+        flex-direction: column;
+
+        &__1 {
+            @include sizes(300px, 240px);
+            background-size: 130%;
+            background-position: 50% -2px;
+
+
+            &__btn {
+                margin-bottom: 155px;
+                margin-left: 21px;
+            }
+
+            &__title {
+                width: 250px;
+                margin-bottom: 83px;
+                margin-left: -7px;
+            }
+
+            &__text {
+                width: 250px;
+                margin-left: -7px;
+            }
+        }
+
+        &__2 {
+            @include sizes(300px, 240px);
+            background-size: 129%;
+            background-position: 42% -9px;
+
+
+            &__btn {
+                margin-bottom: 124px;
+                margin-left: 21px;
+            }
+
+            &__title {
+                width: 250px;
+                margin-bottom: 82px;
+                margin-left: -7px;
+            }
+
+            &__text {
+                width: 250px;
+                margin-left: -7px;
+            }
+        }
+
+        &__3 {
+            @include sizes(300px, 240px);
+            background-size: 124%;
+            background-position: 39% -6px;
+
+
+            &__btn {
+                margin-bottom: 155px;
+                margin-left: 21px;
+            }
+
+            &__title {
+                width: 250px;
+                margin-bottom: 83px;
+                margin-left: -7px;
+            }
+
+            &__text {
+                width: 250px;
+                margin-left: -7px;
+            }
+        }
+    }
+
+    .section2 {
+        @include sizes(280px, 1031px);
+        margin-top: 35px;
+        margin-left: 20px;
+
+        &__title {
+            line-height: 27px;
+        }
+
+        &__btn {
+            @include sizes(280px, 40px);
+            padding-left: 8px;
+            margin-top: 15px;
+        }
+    }
+
+    .person {
+        @include sizes(236px, 910px);
+        margin-top: 14px;
+        margin-left: 11px;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &__1 {
+            @include sizes(221px, 220px);
+
+            &__name {
+                margin-top: 19px;
+                margin-left: 3px;
+            }
+
+            &__about {
+                display: block;
+                width: 236px;
+                margin-top: 23px;
+                margin-left: 3px;
+            }
+        }
+
+        &__2 {
+            @include sizes(221px, 210px);
+            margin-top: 15px;
+
+            &__img {
+                @include sizes(120px, 120px);
+            }
+
+            &__name {
+                margin-top: 20px;
+                margin-left: 3px;
+            }
+
+            &__about {
+                display: block;
+                width: 236px;
+                margin-top: 23px;
+                margin-left: 3px;
+            }
+        }
+
+        &__3 {
+            @include sizes(221px, 225px);
+
+            &__img {
+                @include sizes(120px, 120px);
+            }
+
+            &__name {
+                margin-top: 20px;
+                margin-left: 3px;
+            }
+
+            &__about {
+                display: block;
+                width: 236px;
+                margin-top: 28px;
+                margin-left: 4px;
+            }
+        }
+
+        &__4 {
+            @include sizes(221px, 210px);
+            margin-top: 11px;
+
+            &__name {
+                margin-top: 21px;
+                margin-left: 3px;
+            }
+
+            &__about {
+                display: block;
+                width: 236px;
+                margin-top: 22px;
+                margin-left: 3px;
+            }
+        }
+    }
+
+    .section3 {
+        @include sizes(300px, 987px);
+        margin-top: 35px;
+        margin-left: 10px;
+
+        &__title {
+            display: block;
+            width: 280px;
+            font-size: 22px;
+            line-height: 27px;
+        }
+    }
+
+    .idea {
+        @include sizes(300px, 900px);
+        align-content: flex-start;
+        margin-top: 32px;
+
+
+        &__1 {
+            @include sizes(300px, 120px);
+            background-size: 100%;
+            background-position: 35% -41px;
+        }
+
+        &__2 {
+            @include sizes(300px, 120px);
+            background-size: 100%;
+            background-position: 73% -67px;
+            margin-top: 10px;
+        }
+
+        &__3 {
+            @include sizes(300px, 120px);
+            background-size: 102%;
+            background-position: 17% -28px;
+            margin-top: 10px;
+
+            &__title {
+                width: 187px;
+            }
+        }
+
+        &__4 {
+            @include sizes(300px, 120px);
+            background-size: 104%;
+            background-position: 61% -27px;
+            margin-top: 10px;
+        }
+
+        &__5 {
+            @include sizes(620px, 120px);
+            background-size: 104%;
+            background-position: 65% -38px;
+            margin-top: 10px;
+        }
+
+        &__6 {
+            @include sizes(620px, 120px);
+            background-size: 102%;
+            background-position: 49% -42px;
+            margin-top: 10px;
+        }
+
+        &__7 {
+            @include sizes(300px, 120px);
+            background-size: 105%;
+            background-position: 51% -19px;
+            margin-top: 10px;
+        }
+
+    }
+
+    .section4 {
+        @include sizes(280px, 231px);
+        margin-top: 35px;
+        margin-left: 20px;
+
+        &__title {
+            line-height: 27px;
+        }
+
+        &__text {
+            margin-top: 19px;
+            margin-left: 2px;
+        }
+    }
+
+    .search-form {
+        @include sizes(280px, 90px);
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+
+        &__input {
+            @include sizes(280px, 40px);
+        }
+
+        &__btn {
+            @include sizes(280px, 40px);
+            margin-left: 1px;
+            margin-top: 9px;
+            padding-left: 14px;
+        }
+    }
+
+    .footer {
+        @include sizes(320px, 204px);
+
+        &-box {
+            @include sizes(300px, 186px);
+            margin-left: 89px;
+            margin-top: 29px;
+            ;
+        }
+    }
+
+    .menu {
+        margin-top: 5px;
+        margin-left: 24px;
+
+        ul {
+            width: 217px;
+            margin-top: 3px;
+            margin-left: -74px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        &__link {
+            &__5 {
+                margin-left: 1px;
+            }
+
+            &__6 {
+                margin-left: -16px;
+            }
+        }
+    }
+
+    .partners__title {
+        margin-top: -5px;
+        margin-left: 27px;
+    }
+
+    .designer {
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 19px;
+
+        &__link {
+            margin-right: 0;
+            margin-left: -16px;
+        }
+    }
+}
